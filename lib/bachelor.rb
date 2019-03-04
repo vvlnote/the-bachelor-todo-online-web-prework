@@ -1,6 +1,7 @@
 def get_first_name_of_season_winner(data, season)
   # code here
   first_name = ""
+  name = ""
   if data.has_key?(season)
     name = data[season]["name"]
     name_arr = name.split(" ")
