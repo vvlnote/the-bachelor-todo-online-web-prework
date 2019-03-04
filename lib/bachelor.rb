@@ -71,6 +71,5 @@ def get_average_age_for_season(data, season)
   if count != 0
     average_age = total_age/count.to_f
   end
-  puts "#{average_age.round(0)}"
-  average_age.to_i
+  average_age.round(0)
 end
