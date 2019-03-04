@@ -42,7 +42,17 @@ end
 
 def get_occupation(data, hometown)
   # code here
-  is_found = 
+  is_found = false
+  occupation = ""
+  data.each do |season, data_values|
+    data_values.each do |person|
+      if person["hometown"] == hometown && !is_found
+        is_found = true
+        occupation = person["occupation"]
+      end
+    end
+  end
+  occupation
 end
 
 def get_average_age_for_season(data, season)
