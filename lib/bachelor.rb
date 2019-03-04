@@ -58,5 +58,16 @@ end
 def get_average_age_for_season(data, season)
   # code here
   total_age = 0
-  average_arr = []
+  average_age = 0
+  count = 0
+  if data.has_key?(season)
+    data[season].each do |person|
+      total_age += person["age"].to_i
+      count += 1
+    end
+  end
+  if count != 0
+    average_age = total_age/count
+  end
+  average_age
 end
