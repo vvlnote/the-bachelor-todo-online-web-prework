@@ -19,7 +19,7 @@ def get_contestant_name(data, occupation)
   name = ""
   data.each do |season, data_values|
     data_values.each do |item|
-      if item["occuptation"] == occupation
+      if item["occupation"] == occupation
         name = item["name"]
       end
     end
