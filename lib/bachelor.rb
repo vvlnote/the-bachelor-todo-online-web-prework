@@ -65,11 +65,12 @@ def get_average_age_for_season(data, season)
 
       total_age += person["age"].to_i
       count += 1
-      puts "#{person["age"]}, #{total_age}, #{count}"
+      #puts "#{person["age"]}, #{total_age}, #{count}"
     end
   end
   if count != 0
     average_age = total_age/count
   end
+  puts "#{average_age.to_i}"
   average_age.to_i
 end
