@@ -3,9 +3,12 @@ def get_first_name_of_season_winner(data, season)
   first_name = ""
   name = ""
   if data.has_key?(season)
-    name = data[season]["name"]
-    name_arr = name.split(" ")
-    first_name = name_arr[0]
+    data[season].each do |item|
+    if item["status"] == "Winner"
+      name = item["name"]
+      name_arr = name.split(" ")
+      first_name = name_arr[0]
+    end
   end
   first_name
 end
