@@ -62,8 +62,10 @@ def get_average_age_for_season(data, season)
   count = 0
   if data.has_key?(season)
     data[season].each do |person|
+
       total_age += person["age"].to_i
       count += 1
+      puts "#{person["age"]}, #{total_age}, #{count}"
     end
   end
   if count != 0
