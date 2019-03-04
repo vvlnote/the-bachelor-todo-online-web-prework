@@ -9,6 +9,7 @@ def get_first_name_of_season_winner(data, season)
       name_arr = name.split(" ")
       first_name = name_arr[0]
     end
+    end
   end
   first_name
 end
